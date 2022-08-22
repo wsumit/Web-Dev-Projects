@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+
+<style>
+    
+    body{
+        background-image:url("feed2.jpg");
+        background-size: cover;
+        font-family: verdana;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    header h1{
+            /* margin: auto; */
+            font-size: 50px;
+            color: white;
+            line-height: 50%;
+            text-shadow: 2px 2px 4px black;
+            
+    }
+    @keyframes float {
+        0%{
+           
+        }
+        50%{
+            transform:translateY(-10px);
+        }
+        100%{
+            transform:translateY(0px);
+        }
+    }
+    header p{
+        font-size: 30px;
+        animation: float;
+        animation-timing-function: ease-in-out;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+
+    }
+    header{
+        text-align: center;
+        width: 100%;
+    }
+
+    
+    form{
+        height:auto;
+        width:100%;
+      
+      
+        font-size:1.2rem ;
+        background-color: white;
+
+        padding: 25px;
+        border-radius: 10px;
+
+        position: relative;
+       
+    }
+    
+    .field{
+        display: block;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 30px;
+    }
+    .field span{
+        margin-bottom: 10px;
+    }
+
+    select{
+        font-family: "Verdana";
+        font-size:1.1em;
+    }
+    input{
+        font-size:1.1em;
+        width: 40%;
+    }
+    textarea{
+        margin-top:10px ;
+        display: block;
+        width: 80%;
+        font-size:"sans-serif";
+        font-size: 16px;
+    }
+
+  
+
+</style>
+
+<body>
+
+<div style="margin:80px 0 0 20px ; height: auto;width: 40%;position: relative; ">
+    <header>
+    <h1>Feedback</h1>
+    <p><span>Tell Us Your Experience!!</span></p>
+</header>
+
+<form>
+    <div class="field"><span>Best E-mail</span><input type="email" ></div>
+    <div class="field">
+            <span>What Product Did You Buy?</span>
+            <select>
+            <option>Smartphone</option>
+            <option>T.V.</option>
+            <option>Smartwatch</option>
+            <option>Laptops</option>
+            <option>Earphones</option>
+        </select>
+    </div>
+    <div class="field">
+        <span >Please Describe Your Experience</span>
+    </div>
+    <textarea class="field" style="width: 60%;margin:auto;" rows="10" placeholder="What Went Wrong?">
+    
+    </textarea>
+    <button  style="width: 40%;margin-left:30%;">Submit</button>
+</form>
+
+</div>
+
+
+</body>
+</html>

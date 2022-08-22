@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+*{  margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif;
+    font-weight: 900;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.demo{
+
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    background-color: #2058FF;
+    text-align: center;
+  
+
+    position: fixed;
+    top:350px;
+    right: 0px;
+    transform: rotate(90deg);
+}
+
+#feedback:hover{
+    border-radius: 10px;
+    border: none;
+}
+
+li{
+    margin-top: 0px;             /*  INLINE==NO CHANGE IN MARG.,PADD,HEIGHT,WIDTH */
+    display: inline-block;
+    margin-left:20px; 
+    font-size: 25px;       
+}
+nav{
+    width: 100%;
+    height: 7%;
+    background-color: #2058FF;
+    color:yellow;
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    padding-top:5px ;
+    justify-content: space-between; z-index: 10;
+}
+
+nav img{
+    height: 80%;
+    width: 100px;
+    margin-left: 5px;
+   
+}
+
+ul{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cart{
+    color: black;
+}
+.cart img{
+    height: 20px;
+    width:20px;
+}
+.cart-item{
+    font-size: 0.9em;
+    
+   
+}
+
+.search-container{
+    width: 100%;
+    height: 48px;
+    background-color: yellow;
+    position:fixed;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.suggestions{
+   position: absolute;
+    display: flex;
+    flex-direction: column;
+   z-index: 20;
+   top:24px;
+   width: 40%;
+   text-align: center;
+
+}
+.suggestions span{
+    width: 100%;
+   
+    background-color: white;
+    
+}
+.searchbar{
+    height: 70%;
+    width: 40%;
+    background-color: white;
+    border-radius: 9px;
+  
+    position:relative;
+    z-index: 10;
+  transform:scale(1.3);
+    
+   
+}
+
+.color{
+    background-color: pink;
+    display: inline;
+}
+.searchbar input{
+    width:70%;
+    border: 0px;
+    margin-left: 20%;
+
+}
+.searchbar img{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 0px;
+    top:3px;
+}
+
+
+/* CAROUSEL */
+.swiper{
+    position: relative;
+    top:140px;
+    height: 600px;
+
+    
+}
+.swiper-slide{
+    background-color: lightgrey;
+    display:flex;justify-content: center;background-color: white;
+}
+
+
+
+/* main category */
+
+.main{
+    width: 70%;
+    height: auto;
+    position: relative;
+    top:130px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;       /*works well with flex*/
+    margin-top: 50px;
+    padding: 10px;
+    z-index: -1;
+}
+
+.main-cat{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #2058FF;
+
+}
+.card{
+    height:300px;
+    width: 240px;
+    background-color:white;
+    padding: 10px;
+    position: relative;
+    margin:20px 20px;
+    text-align: center;
+    border-radius: 10px;
+    
+
+}
+.card p{
+    display: block;
+   
+}
+.card img{
+    height: 55%;
+    width: 90%;
+}
+.card button{
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background-color:  rgb(182,243,3);
+    padding: 3px;
+    margin-top: 5px;
+}
+
+
+
+/*best sellers*/
+.best-sellers{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top:50px;
+    margin-bottom: 200px;
+}
+.cards2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    background-color:rgb(78,34,226);
+
+}
+
+.card2{
+    position: relative;
+    background-color: white;
+    height: 200px;
+    width: 440px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+.add{
+    position: absolute;
+    right: 10px;
+    top:5px;
+    font-size: 25px;
+    color: #2ead29;
+}
+
+.card2 img{
+    width: 44%;
+    height: 90%;
+    margin: 8px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 50%;
+    
+   
+
+}
+
+.details button{
+   
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(240,240,3);
+    border: 2px solid black;
+
+    
+}
+button{
+    z-index: 1000;
+}
+
+
+
+.cardfooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+}
+.cardfooter img{
+    height: 30px;
+    width: 30px;
+}
+.cardfooter span{
+    height: 25px;
+    width: 50px;
+    color: white;
+    background-color:#2ead29;
+    border-radius: 10px;
+}
+
+.product{
+    font-size:20px;
+    font-weight: 200px;
+}
+
+.brand{
+    font-weight: 200;font-family:sans-serif;color:grey;
+    letter-spacing: 1px;
+}
+
+
+.footer{
+    background-color: black;
+    height:auto;
+    width:100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color:white;
+    position: absolute;
+    
+    
+
+   
+}
+
+.newsletter input{
+    display: block;
+    margin-top: 10px;
+}
+
+.newsletter button{
+    margin-top: 10px;
+    width: 100px;
+    color: white;
+    background-color: black;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height:200px;
+    background-color: lightgrey;
+    margin-top: 100px;
+    
+
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+
+.footer-bottom{
+    background-color: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+
+}
+
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+
+}
+
+
+

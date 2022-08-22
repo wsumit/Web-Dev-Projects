@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Open+Sans:wght@700&family=Poppins:wght@600&display=swap');
+body{
+    margin: 0;padding: 0;
+    box-sizing:border-box;    /*border padding Included*/
+    background-image: linear-gradient(to top right,rgba(52,162,134,0),rgba(52,162,134,1) 90%);
+}
+header{
+    font-size: 50px;
+    font-family: 'Cormorant SC', serif;
+   text-align: center;
+}
+
+header p span{
+    font-family: 'Poppins', sans-serif;
+    color: #ffc600;
+}
+
+.main{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-family:'Poppins';
+
+
+}
+input{
+    background-color:white;
+}
+.item{
+    font-size: 30px;
+    width: 32%;
+    text-align: center;
+}
+
+/* .object{
+    margin: 50px 0;
+    height: 500px;
+    width: 70vw;
+    
+    padding: 30px;
+    background-color: #ffc600;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+} */
+img{
+    
+    height:500px ;
+    width:800px ;
+    background-color: #ffc600;
+    margin-left: 300px;
+}
+

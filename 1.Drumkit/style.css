@@ -1,0 +1,49 @@
+/* what did you learn?
+1->setTimeout function accepts args. as (function(){},*100==1milisec*)
+2->data-key,attribute selector,audio.play();
+
+*/
+
+
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+/* KEYSS */
+.drums{
+    display: flex;
+    height: 120px;
+    width: 80%;
+    flex-direction: row;
+    margin: auto;
+    margin-top:18%;
+    justify-content: space-around;
+}
+.key{
+    font-size: 50px;
+    height:100%;
+    width: 10%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    border: solid black 2px;
+    border-radius: 5px;
+    color:white;
+    padding-top:5px;
+    text-shadow: 3px 3px black;
+                        transition: all 0.2s;
+}
+.key span{
+    font-size: 20px;
+    color:yellow;
+    display: block;
+}
+
+/* PLAYING CLASS */
+.playing{
+    transform:scale(1.1);
+    border-color: #ffc500;
+    box-shadow: 0 0 10px #ffc500;
+}

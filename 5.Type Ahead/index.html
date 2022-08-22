@@ -1,0 +1,140 @@
+<!-- 
+1. look for keyup event on input
+2. take the input and run filter on cities array;   ..REG EXP
+3. from the filtered array map the cities to thier html elements also
+add color class using REG EXP
+4.innerHTML of container==html
+
+
+-->
+
+
+<html>
+<head>
+    <title>
+        5. Type Ahead -Using Ajax
+    </title>
+<style>
+
+body{
+    margin:0;padding:0;background-color:#95ff23;
+    display: flex;
+    justify-content: center;
+    font-family:Verdana;
+    
+}
+
+.container{
+    width:40vw;
+    margin-top:100px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    position: relative;
+}
+
+input{
+    font-size: 50px;
+    display:inline-block;
+    border:none;
+    
+}
+.suggestions{
+    width:90%;
+}
+.item{
+    background-color:white;
+    border:0.5px solid black;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    /* transform: rotateX(0deg); */
+}
+
+.color{
+   
+    background-color: orange;
+}
+
+</style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <input type="text"> 
+        
+        <div class="suggestions">
+            <div class="item">
+                <!-- <p> Karnal,haryana</p>
+                <span>152,000</span> -->
+            </div>
+        </div>
+        
+
+        
+
+    </div>
+
+<script>
+
+    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+    const cities=[];
+    fetch(endpoint).then(blob=>blob.json()).then(data=>cities.push(...data));
+    
+    function match(word,cities){
+            return cities.filter(place=>{
+                let x=new RegExp(word,"gi");        //filtering cities;
+            return place.city.match(x) || place.state.match(x);
+            })
+    }
+
+    // function map(matches){
+    //     return 
+    // }
+
+    const searchBar=document.querySelector("input");
+    searchBar.addEventListener("keyup",function(){
+       let matches=match(this.value,cities);
+       let html=matches.map((city)=>{
+            const regex=new RegExp(this.value,"gi"); //adding color class
+            let cityName=city.city.replace(regex,`<span class="color">${this.value}</span>`);
+            let stateName=city.state.replace(regex,`<span class="color">${this.value}</span>`);
+            
+            return `<div class="item">
+                <p> ${cityName}, ${stateName}</p>
+                <span>${city.population}</span>     
+            </div>`;                            //making html elements
+       }).join("");                         //string of html elements
+
+      
+       const container=document.querySelector(".suggestions");
+       container.innerHTML=html;
+
+       
+    })
+    const container=document.querySelector(".suggestions");
+
+    
+    searchBar.addEventListener("focusout",()=>{
+        
+        container.style.visibility="hidden";
+    });
+    searchBar.addEventListener("focusin",()=>{
+        
+        container.style.visibility="visible";
+    });
+
+
+
+   
+
+</script>
+</body>
+</html>

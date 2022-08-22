@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+  <head>
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post">
+    <div class="container">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+    </div>
+        <div class="pass">Forgot Password?</div>
+        <button><a href="home.html">Login</a></button>
+        <div class="signup_link">
+          Not a member? <a href="#">Signup</a>
+        </div>
+      </form>
+    </div>
+
+<script>
+
+$(document).ready(function(){
+
+   $(".signup_link a").click(function(){
+    $(".txt_field").remove();
+        let string=`
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Name</label>
+        </div>
+        
+        <div class="txt_field">
+          <input type="email" required>
+          <span></span>
+          <label>E-mail</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>New Password</label>
+        </div>`
+        ;
+        $(".container").append(string);     //appending signup page
+        $(".signup_link").remove();
+
+        //signup footer
+
+        let string2=`<div class="signup_link">
+          Already a member? <a href="#">Login!</a>
+        </div>`;
+
+        //changing heading to "signup"
+        document.querySelector(".center h1").innerHTML="Signup";
+        $("form").append(string2);
+
+
+   });
+
+
+
+});
+
+let butt=document.querySelector("button");
+
+butt.addEventListener('click',function(){
+    var items=[...document.querySelectorAll(".txt_field input")];
+    if(items.length==2){
+        var val=items[0].value;
+        if(val<=4){
+            alert("Username Should Be More Than 4 Characters");
+        }
+        
+
+    }
+    if(items.length==3){
+        
+        if(items[2].value.length<8){
+            alert("password should be atleast 8 length");
+        }
+        if(items[1].value.includes("@"==false)){
+            alert("mail should include '@'");
+        }
+
+        
+    }
+
+})
+
+</script>
+  </body>
+</html>

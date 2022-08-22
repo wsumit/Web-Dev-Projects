@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Getme.in</title>
+<link href="home.css" rel="stylesheet" type="text/css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
+<!-- SINCE ONLY RELATIVE POSITION MEANS THAT ELEMENT IS STILL THERE BE CAREFULL WITH THE NEXT ELEMENTS POSITIONS -->
+
+</head>
+<body>
+
+    <div  class="demo">
+        <a  href="demo page.html" target="_blank">Demo</a>
+
+    </div>
+    <nav>
+
+        <img src="images/logo.png">
+        <ul type="none">
+            <li><a target="_blank" href="home.html">Home</a></li>
+            <li><a href="#best" style="color:yellow;">Best Deals</a> </li>
+            <li id="laptop"><a target="_blank" href="laptops.html">Laptops</a></li>
+            <li id="feedback"><a target="_blank" href="feedback.htm">Feedback</a></li>
+            <li ><a target="_blank" href="contactUs.html">Contact Us</a></li>
+           <!--  <li class="cart"><img src="cart.png">  (<span class="cart-item">0</span>)</li> -->
+        </ul>
+        
+        
+        </nav>
+        <!-- SEARCH BAR -->
+        <div class="search-container">
+            <div style="position:relative;width: 40%;display:flex;flex-direction: row;justify-content: center;">
+            <div class="searchbar">
+                <img src="images/home/search.png">
+                <input type="text">
+            </div>
+            <div class="suggestions">
+                
+            </div>
+        </div>
+
+        </div>
+        
+        
+<!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" style="padding:0px 30px ;" >
+        <img src="images/home/1.jpg" style="height:100%;
+        width:60%;">
+    </div>
+      <div class="swiper-slide">
+        <img src="images/home/4.jpg" style="height:100%;
+        width:60%;">
+
+      </div>
+      <div class="swiper-slide"><img src="images/home/5.webp" style="height:100%;
+        width:60%;"></div>
+      <div class="swiper-slide">
+        <img src="images/home/3.jpg" style="height:90%;
+        width:100%;">
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <!-- centered Mainbody -->
+
+  <content class="main">
+
+    <div class="main-cat">
+        <h1>Categories</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Mobiles</h2>
+                <img src="images/home/mobile.jpg">
+                <p class="brand">from apple,samsung and more</p>
+                <button>See more</button>
+            </div>
+
+            <div class="card">
+                <h2>TVs</h2>
+                <img src="images/home/tv.webp">
+                <p class="brand">from apple,samsung and more</p>
+                <button>See more</button>
+            </div>
+
+            <div class="card">
+                <h2>Laptops</h2>
+                <img src="images/home/laptop.jpg">
+                <p class="brand">from apple,samsung and more</p>
+
+                <button>See More</button>
+            </div>
+            <div class="card">
+                <h2>Headphones</h2>
+                <img src="images/home/headphones.jpg">
+                <p class="brand">from <a href="" style="color:grey">apple</a>,samsung and more</p>
+                <button>See more</button>
+            </div>
+
+            <div class="card">
+                <h2>Accessories</h2>
+                <img src="images/home/watch.jpg">
+                <p class="brand">from apple,samsung and more</p>
+                <button>See more</button>
+            </div>
+
+            <div class="card">
+                <h2>Appliances</h2>
+                <img src="images/home/home.jpg">
+                <p class="brand">from apple,samsung and more</p>
+                <button>See more</button>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="best-sellers" id="best">
+        <h1>Best Sellers</h1>
+        <div class="cards2">
+            <div class="card2">
+                <img src="images/home/mac.jpg">
+                <div class="details">
+                    <h1>$ 1699</h1>
+
+                    <p class="product">Macbook Air</p>
+                    <h3 class="brand ">Apple</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.6⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="card2">
+                <img src="images/home/smarttv.jpg">
+                <div class="details">
+                    <h1>$ 1999</h1>
+
+                    <p class="product">Samsung </p>
+                    <h3 class="brand">Samsung</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.1⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="card2">
+                <img src="images/home/dell.jpg">
+                <div class="details">
+                    <h1>$ 599</h1>
+
+                    <p class="product">Dell Inspiron 8GB,1TB</p>
+                    <h3 class="brand">Dell</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.6⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="card2">
+                <img src="images/home/oneplus.jpg">
+                <div class="details">
+                    <h1>$ 299</h1>
+
+                    <p class="product">1+ Nord CE</p>
+                    <h3 class="brand">OnePlus</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.6⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="card2">
+                
+                <img src="images/home/skullcandy.jpg">
+                <div class="details">
+                    <h1>$ 1699</h1>
+
+                    <p class="product">SkullCandy Crusher</p>
+                    <h3 class="brand">Skull Candy</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.6⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="card2">
+                <i class="fas fa-plus-circle add" ></i>
+                <img src="images/home/logitech.jpg">
+                <div class="details">
+                    <h1>$ 20</h1>
+
+                    <p class="product">Wireless Keyboard</p>
+                    <h3 class="brand">Logitech</h3>
+
+                    <button>add to cart</button>
+                    
+                    <div class="cardfooter">
+                        <span>4.6⭐</span>
+                        <img src="images/home/verified.png">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  </content>
+
+  
+  <footer>
+    <div class="footer-content">
+        <h3>getme.in</h3>
+        <div class="newsletter">
+            Get Latest Deals
+            <input type="text">
+            <button>I'm In</button>
+        </div>
+
+    </div> 
+
+    <div class="footer-bottom">
+        <p>copyright &copy;2022 getme.in designed by <span>me</span></p>
+    </div>
+    
+    
+  </footer>
+
+  
+
+<script src="home.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    spaceBetween: 0,
+    parallax: true,
+    autoplay: 1000,
+    speed: 800,
+    autoplayDisableOnInteraction: false,
+    autoplay: {
+    delay: 4000,
+  },
+});
+
+
+</script>
+</body>
+</html>
