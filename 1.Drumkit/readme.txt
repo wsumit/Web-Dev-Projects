@@ -1,0 +1,1 @@
+type the displayed keys and listen for a drum sound!
